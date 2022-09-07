@@ -45,7 +45,7 @@
                                 <asp:TextBox ID="Password" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="PasswordValidator" runat="server" ErrorMessage="Please enter your password" ControlToValidate="Password" ForeColor="Red" Display="Dynamic" ValidationGroup="LogInValidator"></asp:RequiredFieldValidator>
                             </div>
-                            <div class="form-group d-flex justify-content-between">
+                            <div class="form-group d-flex justify-content-between flex-column flex-md-row">
                                 <div class="d-flex align-items-center">
                                     <asp:CheckBox ID="RememberMe" runat="server" CssClass="m-0 p-0" />
                                     <label class="cust-checkbox-label m-0 pl-2" for="RememberMe">Remember me</label>
