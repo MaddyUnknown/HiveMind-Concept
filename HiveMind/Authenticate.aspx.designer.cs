@@ -51,6 +51,24 @@ namespace HiveMind
         protected global::System.Web.UI.WebControls.TextBox Email;
 
         /// <summary>
+        /// EmailValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator EmailValidator;
+
+        /// <summary>
+        /// EmailPatternValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator EmailPatternValidator;
+
+        /// <summary>
         /// Password control.
         /// </summary>
         /// <remarks>
@@ -58,6 +76,15 @@ namespace HiveMind
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Password;
+
+        /// <summary>
+        /// PasswordValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator PasswordValidator;
 
         /// <summary>
         /// RememberMe control.
@@ -114,6 +141,15 @@ namespace HiveMind
         protected global::System.Web.UI.WebControls.TextBox RegisterName;
 
         /// <summary>
+        /// RequiredRegisterName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredRegisterName;
+
+        /// <summary>
         /// RegisterEmail control.
         /// </summary>
         /// <remarks>
@@ -121,6 +157,24 @@ namespace HiveMind
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox RegisterEmail;
+
+        /// <summary>
+        /// RequiredRegisterEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredRegisterEmail;
+
+        /// <summary>
+        /// RequiredRegisterEmailPatternValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RequiredRegisterEmailPatternValidator;
 
         /// <summary>
         /// RegisterPassword control.
@@ -132,6 +186,15 @@ namespace HiveMind
         protected global::System.Web.UI.WebControls.TextBox RegisterPassword;
 
         /// <summary>
+        /// RequiredRegisterPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredRegisterPassword;
+
+        /// <summary>
         /// RegisterConfirmPassword control.
         /// </summary>
         /// <remarks>
@@ -139,6 +202,24 @@ namespace HiveMind
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox RegisterConfirmPassword;
+
+        /// <summary>
+        /// RequiredRegisterConfirmPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredRegisterConfirmPassword;
+
+        /// <summary>
+        /// RegisterConfirmPasswordEqualPasswordValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator RegisterConfirmPasswordEqualPasswordValidator;
 
         /// <summary>
         /// SignUpButton control.
@@ -168,13 +249,31 @@ namespace HiveMind
         protected global::System.Web.UI.WebControls.View ForgotPassword;
 
         /// <summary>
-        /// TextBox2 control.
+        /// ForgotEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox ForgotEmail;
+
+        /// <summary>
+        /// RequiredForgotEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredForgotEmail;
+
+        /// <summary>
+        /// ForgotEmailPatternValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator ForgotEmailPatternValidator;
 
         /// <summary>
         /// GenerateEmail control.

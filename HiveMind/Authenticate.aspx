@@ -37,10 +37,13 @@
                             <div class="form-group">
                                 <label>Email</label>
                                 <asp:TextBox ID="Email" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="EmailValidator" runat="server" ErrorMessage="Please enter your email" ControlToValidate="Email" ForeColor="Red" Display="Dynamic" ValidationGroup="LogInValidator"></asp:RequiredFieldValidator>
+                                <asp:RegularExpressionValidator ID="EmailPatternValidator" runat="server" ErrorMessage="Please enter a valid email" ControlToValidate="Email" ForeColor="Red" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="LogInValidator"></asp:RegularExpressionValidator>
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
                                 <asp:TextBox ID="Password" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="PasswordValidator" runat="server" ErrorMessage="Please enter your password" ControlToValidate="Password" ForeColor="Red" Display="Dynamic" ValidationGroup="LogInValidator"></asp:RequiredFieldValidator>
                             </div>
                             <div class="form-group d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
@@ -50,7 +53,7 @@
                                 <asp:Button ID="Button1" runat="server" EnableTheming="True" Text="Forgot Password?" CssClass="cust-btn-link cust-txt-primary font-weight-bold" OnCommand="InternalPageChangeCommand" CommandName="pageNumber" CommandArgument="2"/>
                             </div>
                             <div class="form-group">
-                                <asp:Button ID="LogInButton" runat="server" Text="Log In" CssClass="btn btn-block cust-btn-primary" />
+                                <asp:Button ID="LogInButton" runat="server" Text="Log In" CssClass="btn btn-block cust-btn-primary" ValidationGroup="LogInValidator" />
                             </div>
                             <div class="form-group d-flex justify-content-center">
                                 Don't Have Account? <asp:Button ID="AuthenticateSignUp" runat="server" EnableTheming="True" Text="Sign Up" CssClass="cust-btn-link cust-txt-primary font-weight-bold" OnCommand="InternalPageChangeCommand" CommandName="pageNumber" CommandArgument="1"/>
@@ -68,21 +71,27 @@
                             <div class="form-group">
                                 <label>Full Name</label>
                                 <asp:TextBox ID="RegisterName" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredRegisterName" runat="server" ErrorMessage="Please enter your name" ControlToValidate="RegisterName" ForeColor="Red" Display="Dynamic" ValidationGroup="SignUpValidator"></asp:RequiredFieldValidator>
                             </div>
                             <div class="form-group">
                                 <label>Email</label>
                                 <asp:TextBox ID="RegisterEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredRegisterEmail" runat="server" ErrorMessage="Please enter an email" ControlToValidate="RegisterEmail" ForeColor="Red" Display="Dynamic" ValidationGroup="SignUpValidator"></asp:RequiredFieldValidator>
+                                <asp:RegularExpressionValidator ID="RequiredRegisterEmailPatternValidator" runat="server" ErrorMessage="Please enter a valid email" ControlToValidate="RegisterEmail" ForeColor="Red" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="SignUpValidator"></asp:RegularExpressionValidator>
                             </div>
                             <div class="form-group">
                                 <label>Create Password</label>
                                 <asp:TextBox ID="RegisterPassword" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredRegisterPassword" runat="server" ErrorMessage="Please enter a password" ControlToValidate="RegisterPassword" ForeColor="Red" Display="Dynamic" ValidationGroup="SignUpValidator"></asp:RequiredFieldValidator>
                             </div>
                             <div class="form-group">
                                 <label>Confirm Password</label>
                                 <asp:TextBox ID="RegisterConfirmPassword" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredRegisterConfirmPassword" runat="server" ErrorMessage="Please re-enter password" ControlToValidate="RegisterConfirmPassword" ForeColor="Red" Display="Dynamic" ValidationGroup="SignUpValidator"></asp:RequiredFieldValidator>
+                                <asp:CompareValidator ID="RegisterConfirmPasswordEqualPasswordValidator" runat="server" ErrorMessage="Password and Confirm Password are not Equal" ForeColor="Red" ControlToValidate="RegisterConfirmPassword" ControlToCompare="RegisterPassword" Display="Dynamic" ValidationGroup="SignUpValidator"></asp:CompareValidator>
                             </div>
                             <div class="form-group">
-                                <asp:Button ID="SignUpButton" runat="server" Text="Sign Up" CssClass="btn btn-block cust-btn-primary" />
+                                <asp:Button ID="SignUpButton" runat="server" Text="Sign Up" CssClass="btn btn-block cust-btn-primary" ValidationGroup="SignUpValidator" />
                             </div>
                             <div class="form-group d-flex justify-content-center">
                                 Already have an account? <asp:Button ID="RegisterLogIn" runat="server" EnableTheming="True" Text="Log In" CssClass="cust-btn-link cust-txt-primary font-weight-bold" OnCommand="InternalPageChangeCommand" CommandName="pageNumber" CommandArgument="0"/>
@@ -99,10 +108,12 @@
                         <div class="container mt-0 mb-5 w-lg-75">
                             <div class="form-group">
                                 <label>Email</label>
-                                <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="ForgotEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredForgotEmail" runat="server" ErrorMessage="Please enter an email" ControlToValidate="ForgotEmail" ForeColor="Red" Display="Dynamic" ValidationGroup="ForgotPasswordValidator"></asp:RequiredFieldValidator>
+                                <asp:RegularExpressionValidator ID="ForgotEmailPatternValidator" runat="server" ErrorMessage="Please enter a valid email" ControlToValidate="ForgotEmail" ForeColor="Red" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="ForgotPasswordValidator"></asp:RegularExpressionValidator>
                             </div>
                             <div class="form-group">
-                                <asp:Button ID="GenerateEmail" runat="server" Text="Generate Email" CssClass="btn btn-block cust-btn-primary" />
+                                <asp:Button ID="GenerateEmail" runat="server" Text="Generate Email" CssClass="btn btn-block cust-btn-primary" ValidationGroup="ForgotPasswordValidator" />
                             </div>
                             <div class="text-center font-weight-bold">
                                 or
