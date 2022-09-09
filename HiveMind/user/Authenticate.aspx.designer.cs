@@ -24,6 +24,15 @@ namespace HiveMind
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// ToastHolder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder ToastHolder;
+
+        /// <summary>
         /// MultiView1 control.
         /// </summary>
         /// <remarks>
@@ -85,6 +94,15 @@ namespace HiveMind
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator PasswordValidator;
+
+        /// <summary>
+        /// PasswordPatternValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator PasswordPatternValidator;
 
         /// <summary>
         /// RememberMe control.
@@ -150,6 +168,15 @@ namespace HiveMind
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredRegisterName;
 
         /// <summary>
+        /// RequiredRegisterNamePatternValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RequiredRegisterNamePatternValidator;
+
+        /// <summary>
         /// RegisterEmail control.
         /// </summary>
         /// <remarks>
@@ -168,13 +195,13 @@ namespace HiveMind
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredRegisterEmail;
 
         /// <summary>
-        /// RequiredRegisterEmailPatternValidator control.
+        /// RegisterEmailPatternValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RequiredRegisterEmailPatternValidator;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegisterEmailPatternValidator;
 
         /// <summary>
         /// RegisterPassword control.
@@ -193,6 +220,15 @@ namespace HiveMind
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredRegisterPassword;
+
+        /// <summary>
+        /// RegisterPasswordPatternValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegisterPasswordPatternValidator;
 
         /// <summary>
         /// RegisterConfirmPassword control.

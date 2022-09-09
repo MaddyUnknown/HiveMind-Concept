@@ -14,7 +14,7 @@
     <RootNamespace>HiveMind</RootNamespace>
     <AssemblyName>HiveMind</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44360</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
@@ -67,27 +67,100 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="asset\image\icon\error.png" />
+    <Content Include="asset\image\icon\success.png" />
     <Content Include="asset\image\malik-skydsgaard-Bx_wZNbWT98-unsplash.jpg" />
     <Content Include="asset\javascript\master.js" />
     <Content Include="asset\stylesheet\color.css" />
     <Content Include="asset\stylesheet\main.css" />
     <Content Include="asset\stylesheet\pages\Login.css" />
+    <Content Include="asset\stylesheet\pages\WelcomePage.css" />
     <Content Include="asset\stylesheet\utils.css" />
-    <Content Include="Authenticate.aspx" />
+    <Content Include="data\login_data.xml" />
+    <Content Include="errorPage\Error.aspx" />
+    <Content Include="LogOutSuccessful.aspx" />
+    <Content Include="RegistrationSuccessful.aspx" />
+    <Content Include="site\LogInSuccessful.aspx" />
+    <Content Include="site\SearchResult.aspx" />
+    <Content Include="userDefinedControl\ToastNotification.ascx" />
+    <Content Include="user\Authenticate.aspx" />
     <Content Include="Web.config" />
+    <Content Include="site\HomePage.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Authenticate.aspx.cs">
+    <Compile Include="authenticationUtils\BaseAuthenticationService.cs" />
+    <Compile Include="authenticationUtils\IAuthenticationService.cs" />
+    <Compile Include="authenticationUtils\XmlAuthenticationService.cs" />
+    <Compile Include="errorPage\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="errorPage\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogOutSuccessful.aspx.cs">
+      <DependentUpon>LogOutSuccessful.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogOutSuccessful.aspx.designer.cs">
+      <DependentUpon>LogOutSuccessful.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="masterTemplate\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="masterTemplate\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationSuccessful.aspx.cs">
+      <DependentUpon>RegistrationSuccessful.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrationSuccessful.aspx.designer.cs">
+      <DependentUpon>RegistrationSuccessful.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="site\LogInSuccessful.aspx.cs">
+      <DependentUpon>LogInSuccessful.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="site\LogInSuccessful.aspx.designer.cs">
+      <DependentUpon>LogInSuccessful.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="site\SearchResult.aspx.cs">
+      <DependentUpon>SearchResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="site\SearchResult.aspx.designer.cs">
+      <DependentUpon>SearchResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userDefinedControl\ToastNotification.ascx.cs">
+      <DependentUpon>ToastNotification.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userDefinedControl\ToastNotification.ascx.designer.cs">
+      <DependentUpon>ToastNotification.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userDefinedControl\UserControlConstants.cs" />
+    <Compile Include="user\Authenticate.aspx.cs">
       <DependentUpon>Authenticate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Authenticate.aspx.designer.cs">
+    <Compile Include="user\Authenticate.aspx.designer.cs">
       <DependentUpon>Authenticate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="site\HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="site\HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="masterTemplate\Site.Master" />
     <None Include="packages.config" />
+    <Content Include="site\Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -95,6 +168,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -110,7 +184,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>63653</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44360/</IISUrl>
+          <IISUrl>http://localhost/HiveMind</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

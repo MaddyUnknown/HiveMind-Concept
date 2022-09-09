@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Place this file in working directory and configure it in web.config-->
+<credentials>
+  <user>
+    <name>MaddyUnknown</name>
+    <email>dummy@gmail.com</email>
+    <password>937E8D5FBB48BD4949536CD65B8D35C426B80D2F830C5C308E2CDEC422AE2244</password>
+  </user>
+</credentials>
