@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterTemplate/Site.Master" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="HiveMind.WelcomePage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterTemplate/Site.Master" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="HiveMind.View.HomePage" %>
 <asp:Content ID="head" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="<%=Request.ApplicationPath+"/asset/stylesheet/pages/WelcomePage.css"%>" />
 </asp:Content>

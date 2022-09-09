@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterTemplate/Site.Master" AutoEventWireup="true" CodeBehind="LogOutSuccessful.aspx.cs" Inherits="HiveMind.LogOutSuccessful" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterTemplate/Site.Master" AutoEventWireup="true" CodeBehind="LogOutSuccessful.aspx.cs" Inherits="HiveMind.View.LogOutSuccessful" %>
 <%@MasterType VirtualPath="~/masterTemplate/Site.Master" %>
 <asp:Content ID="Head" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

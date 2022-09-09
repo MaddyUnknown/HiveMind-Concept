@@ -8,7 +8,7 @@ using System.Web.Security;
 using HiveMind.AuthenticateUtils;
 using HiveMind.Userdefined.Control;
 
-namespace HiveMind
+namespace HiveMind.View
 {
     public partial class Login : System.Web.UI.Page
     {
@@ -69,7 +69,7 @@ namespace HiveMind
                 if(authenticationService.UserRegistration(RegisterName.Text, RegisterEmail.Text, RegisterPassword.Text))
                 {
                     //CreateToast("~/asset/image/icon/success.png", "User Registration", "User was successfully registered");
-                    Server.Transfer("~/RegistrationSuccessful.aspx");
+                    Server.Transfer("~/views/RegistrationSuccessful.aspx");
                 }
                 else
                 {

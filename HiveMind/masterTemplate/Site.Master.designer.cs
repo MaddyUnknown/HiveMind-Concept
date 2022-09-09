@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HiveMind.master
+namespace HiveMind.Master
 {
 
 

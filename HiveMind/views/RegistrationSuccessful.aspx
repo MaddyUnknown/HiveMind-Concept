@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterTemplate/Site.Master" AutoEventWireup="true" CodeBehind="RegistrationSuccessful.aspx.cs" Inherits="HiveMind.RegistrationSuccessful" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterTemplate/Site.Master" AutoEventWireup="true" CodeBehind="RegistrationSuccessful.aspx.cs" Inherits="HiveMind.View.RegistrationSuccessful" %>
 <%@MasterType VirtualPath="~/masterTemplate/Site.Master" %>
 <asp:Content ID="Head" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

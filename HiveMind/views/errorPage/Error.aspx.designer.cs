@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HiveMind.errorPages
+namespace HiveMind.View
 {
 
 

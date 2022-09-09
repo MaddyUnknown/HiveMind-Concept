@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Authenticate.aspx.cs" Inherits="HiveMind.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Authenticate.aspx.cs" Inherits="HiveMind.View.Login" %>
 
 <%--<%@ Register Src="../user-defined-control/ToastNotification.ascx" TagName="ToastNotification" TagPrefix="uc1" %>--%>
 

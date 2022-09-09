@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace HiveMind
+namespace HiveMind.View
 {
     public partial class RegistrationSuccessful : System.Web.UI.Page
     {
@@ -19,7 +19,7 @@ namespace HiveMind
 
         protected void LogIn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/user/Authenticate.aspx");
+            Response.Redirect("~/user/authenticate");
         }
     }
 }

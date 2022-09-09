@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HiveMind
+namespace HiveMind.View
 {
 
 
-    public partial class LogOutSuccessful
+    public partial class RegistrationSuccessful
     {
 
         /// <summary>
@@ -29,11 +29,11 @@ namespace HiveMind
         /// <remarks>
         /// Auto-generated property.
         /// </remarks>
-        public new HiveMind.master.Site Master
+        public new HiveMind.Master.Site Master
         {
             get
             {
-                return ((HiveMind.master.Site)(base.Master));
+                return ((HiveMind.Master.Site)(base.Master));
             }
         }
     }

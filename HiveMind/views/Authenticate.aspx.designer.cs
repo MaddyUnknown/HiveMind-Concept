@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HiveMind
+namespace HiveMind.View
 {
 
 

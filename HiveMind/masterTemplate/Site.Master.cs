@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Security;
 
-namespace HiveMind.master
+namespace HiveMind.Master
 {
     public partial class Site : System.Web.UI.MasterPage
     {
@@ -19,7 +19,7 @@ namespace HiveMind.master
         {
             FormsAuthentication.SignOut();
             //FormsAuthentication.RedirectToLoginPage();
-            Response.Redirect("~/LogOutSuccessful.aspx");
+            Response.Redirect("~/logOutSuccess");
         }
 
         public Button LogOutHeaderButton
