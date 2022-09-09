@@ -8,16 +8,22 @@ namespace HiveMind.AuthenticateUtils
 
     public class XmlAuthenticationService : BaseAuthenticationService
     {
+        private string path;
+
+        public XmlAuthenticationService(string path)
+        {
+            this.path = path;
+        }
 
         public override bool Authenticate(string email, string password)
         {
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
-                throw new ArgumentException("User Authentication Input can't be null or empty");
+                throw new ArgumentException(AuthenticationConstants.AuthenticationInputNullOrEmpty);
             }
 
             DataSet dataSet = new DataSet();
-            dataSet.ReadXml(ConfigurationManager.AppSettings["LoginFileLocation"]);
+            dataSet.ReadXml(this.path);
 
             foreach (DataRow row in dataSet.Tables[0].Rows)
             {
@@ -34,11 +40,11 @@ namespace HiveMind.AuthenticateUtils
         {
             if(string.IsNullOrEmpty(name) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
-                throw new ArgumentException("User Registration Input can't be null or empty");
+                throw new ArgumentException(AuthenticationConstants.RegistrationInputNullOrEmpty);
             }
 
             XmlDocument xmlDocument = new XmlDocument();
-            xmlDocument.Load(ConfigurationManager.AppSettings["LoginFileLocation"]);
+            xmlDocument.Load(this.path);
             XmlElement root = xmlDocument.DocumentElement;
 
             bool alreadyRegisterd = false;
@@ -73,7 +79,7 @@ namespace HiveMind.AuthenticateUtils
                 newUserPassword.AppendChild(newUserPasswordContent);
 
                 root.InsertAfter(newUser, root.LastChild);
-                xmlDocument.Save(ConfigurationManager.AppSettings["LoginFileLocation"]);
+                xmlDocument.Save(this.path);
                 return true;
             }
             else

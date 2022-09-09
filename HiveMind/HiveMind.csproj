@@ -90,7 +90,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="authenticationUtils\BaseAuthenticationService.cs" />
-    <Compile Include="authenticationUtils\IAuthenticationService.cs" />
     <Compile Include="authenticationUtils\XmlAuthenticationService.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

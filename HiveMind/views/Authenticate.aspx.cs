@@ -7,12 +7,13 @@ using System.Web.UI.WebControls;
 using System.Web.Security;
 using HiveMind.AuthenticateUtils;
 using HiveMind.Userdefined.Control;
+using System.Configuration;
 
 namespace HiveMind.View
 {
     public partial class Login : System.Web.UI.Page
     {
-        private BaseAuthenticationService authenticationService = new XmlAuthenticationService();
+        private BaseAuthenticationService authenticationService = new XmlAuthenticationService(ConfigurationManager.AppSettings["LoginFileLocation"]);
 
 
         protected void Page_PreInit(object sender, EventArgs e)
@@ -52,13 +53,13 @@ namespace HiveMind.View
                 }
                 else
                 {
-                    CreateToast("~/asset/image/icon/error.png", "Invalid Credentials", "Please enter valid Email and Password");
+                    CreateToast(ViewConstants.errorImageLoc, ViewConstants.invalidCredentials_header, ViewConstants.enterValidInput_body);
                 }
 
             }
             else
             {
-                CreateToast("~/asset/image/icon/error.png", "Invalid Input", "Provided input are not valid");
+                CreateToast(ViewConstants.errorImageLoc, ViewConstants.invalidInput_header, ViewConstants.invalidInput_body);
             }
         }
 
@@ -68,23 +69,23 @@ namespace HiveMind.View
             {
                 if(authenticationService.UserRegistration(RegisterName.Text, RegisterEmail.Text, RegisterPassword.Text))
                 {
-                    //CreateToast("~/asset/image/icon/success.png", "User Registration", "User was successfully registered");
+                    //CreateToast(ViewConstants.successImageLoc, ViewConstants.userRegistration_header, ViewConstants.userRegistationSuccess_body);
                     Server.Transfer("~/views/RegistrationSuccessful.aspx");
                 }
                 else
                 {
-                    CreateToast("~/asset/image/icon/error.png", "User Registration", "Email is already registed");
+                    CreateToast(ViewConstants.errorImageLoc, ViewConstants.userRegistration_header, ViewConstants.emailAlreadyRegistered_body);
                 }
             }
             else
             {
-                CreateToast("~/asset/image/icon/error.png", "Invalid Input", "Provided input are not valid");
+                CreateToast(ViewConstants.errorImageLoc, ViewConstants.invalidInput_header, ViewConstants.invalidInput_body);
             }
         }
 
         protected void GeneratePasswordChangeEmail_Click(object sender, EventArgs e)
         {
-            CreateToast("~/asset/image/icon/error.png", "Server Note", "This feature is currently unavailable");
+            CreateToast(ViewConstants.errorImageLoc, ViewConstants.serverNote_header, ViewConstants.featureNotImplemented);
         }
     }
 }
