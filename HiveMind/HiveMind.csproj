@@ -89,6 +89,7 @@
     <Content Include="views\requireAuthentication\HomePage.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="authenticationUtils\AuthenticationConstants.cs" />
     <Compile Include="authenticationUtils\BaseAuthenticationService.cs" />
     <Compile Include="authenticationUtils\XmlAuthenticationService.cs" />
     <Compile Include="Global.asax.cs">
@@ -159,6 +160,7 @@
     <Compile Include="views\requireAuthentication\HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="views\ViewConstants.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="masterTemplate\Site.Master" />

@@ -5,6 +5,7 @@
 body {
     font-family: 'Ubuntu', sans-serif;
     color: var(--primary-dark);
+    background-color: var(--primary-light);
 }
 
 .form-control{
