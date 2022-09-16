@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
-using System.Configuration;
 using System.Xml;
+using HiveMind.ApplicationException;
 
 namespace HiveMind.AuthenticateUtils
 {
@@ -19,7 +19,7 @@ namespace HiveMind.AuthenticateUtils
         {
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
-                throw new ArgumentException(AuthenticationConstants.AuthenticationInputNullOrEmpty);
+                throw new KeyedException("authentication.input.empty");
             }
 
             DataSet dataSet = new DataSet();
@@ -40,7 +40,7 @@ namespace HiveMind.AuthenticateUtils
         {
             if(string.IsNullOrEmpty(name) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
-                throw new ArgumentException(AuthenticationConstants.RegistrationInputNullOrEmpty);
+                throw new KeyedException("registration.input.empty");
             }
 
             XmlDocument xmlDocument = new XmlDocument();

@@ -89,9 +89,11 @@
     <Content Include="views\requireAuthentication\HomePage.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="authenticationUtils\AuthenticationConstants.cs" />
     <Compile Include="authenticationUtils\BaseAuthenticationService.cs" />
     <Compile Include="authenticationUtils\XmlAuthenticationService.cs" />
+    <Compile Include="exception\ApplicationBaseException.cs" />
+    <Compile Include="exception\KeyedException.cs" />
+    <Compile Include="exception\KeyLookUpConstant.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
