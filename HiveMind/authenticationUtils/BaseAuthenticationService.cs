@@ -1,4 +1,6 @@
 ﻿using System.Web.Security;
+using HiveMind.Model;
+using System.Data;
 
 namespace HiveMind.AuthenticateUtils
 {
@@ -7,6 +9,10 @@ namespace HiveMind.AuthenticateUtils
         abstract public bool Authenticate(string email, string password);
 
         abstract public bool UserRegistration(string name, string email, string password);
+
+        abstract public User UserDetials(string email);
+
+        abstract public string CancelToken(string email);
 
         protected string Encrypt(string password)
         {

@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="authenticationUtils\BaseAuthenticationService.cs" />
+    <Compile Include="authenticationUtils\SqlDbAuthenticationService.cs" />
     <Compile Include="authenticationUtils\XmlAuthenticationService.cs" />
     <Compile Include="exception\ApplicationBaseException.cs" />
     <Compile Include="exception\KeyedException.cs" />
@@ -97,6 +98,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="model\User.cs" />
+    <Compile Include="resolver\AuthenticationServiceResolver.cs" />
     <Compile Include="views\errorPage\Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -13,6 +13,14 @@ namespace HiveMind.ApplicationException
             keyLookUp.Add("default", DefaultExceptionMessage);
             keyLookUp.Add("authentication.input.empty", "User Authentication Input can't be null or empty");
             keyLookUp.Add("registration.input.empty", "User Registration Input can't be null or empty");
+            keyLookUp.Add("user.data.notfound.for.email", "No user found for given email: {0}");
+            keyLookUp.Add("user.data.multiplefound.for.email", "More than one user registed with the given email: {0}");
+            
+            keyLookUp.Add("sql.error.generic", "Error occured during database operation.");
+            keyLookUp.Add("implementation.incomplete", "The following feature is incomplete");
+
+
+            keyLookUp.Add("input.invalid.one", "Invalid input: {0}");
 
         }
 

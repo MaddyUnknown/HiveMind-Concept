@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,13 +8,13 @@ using System.Web.UI.WebControls;
 using System.Web.Security;
 using HiveMind.AuthenticateUtils;
 using HiveMind.Userdefined.Control;
-using System.Configuration;
+using HiveMind.Resolver;
 
 namespace HiveMind.View
 {
     public partial class Login : System.Web.UI.Page
     {
-        private BaseAuthenticationService authenticationService = new XmlAuthenticationService(ConfigurationManager.AppSettings["LoginFileLocation"]);
+        private static BaseAuthenticationService authenticationService = AuthenticationServiceResolver.Resolve(); //new XmlAuthenticationService(ConfigurationManager.AppSettings["LoginFileLocation"]);
 
 
         protected void Page_PreInit(object sender, EventArgs e)

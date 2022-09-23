@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiveMind", "HiveMind\HiveMind.csproj", "{6AC6F6D8-92B0-4592-A051-7EFF11373E49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiveMindTest", "HiveMindTest\HiveMindTest.csproj", "{755D2B37-4588-4013-AF89-206A064F9511}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HiveMindTest", "HiveMindTest\HiveMindTest.csproj", "{755D2B37-4588-4013-AF89-206A064F9511}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

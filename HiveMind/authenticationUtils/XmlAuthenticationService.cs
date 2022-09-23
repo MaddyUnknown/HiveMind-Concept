@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Data;
 using System.Xml;
+using HiveMind.Model;
+using System.Collections.Generic;
 using HiveMind.ApplicationException;
+
 
 namespace HiveMind.AuthenticateUtils
 {
@@ -19,7 +22,7 @@ namespace HiveMind.AuthenticateUtils
         {
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
-                throw new KeyedException("authentication.input.empty");
+                throw new KeyedException("input.invalid.one", email);
             }
 
             DataSet dataSet = new DataSet();
@@ -32,8 +35,53 @@ namespace HiveMind.AuthenticateUtils
                     return true;
                 }
             }
-
             return false;
+        }
+
+        public override string CancelToken(string email)
+        {
+            throw new KeyedException("implementation.incomplete");
+        }
+        
+
+        public override User UserDetials(string email)
+        {
+            if (string.IsNullOrEmpty(email))
+            {
+                throw new KeyedException("authentication.input.empty");
+            }
+
+            XmlDocument xmlDocument = new XmlDocument();
+            xmlDocument.Load(this.path);
+            XmlElement root = xmlDocument.DocumentElement;
+
+            List<User> users = new List<User>();
+
+            foreach (XmlNode element in root.SelectNodes("user"))
+            {
+                if (element.SelectSingleNode("email").InnerText == email)
+                {
+                    User user = new User();
+                    user.Name = element.SelectSingleNode("name").InnerText;
+                    user.Email = element.SelectSingleNode("email").InnerText;
+
+                    users.Add(user);
+                }
+            }
+
+            if(users.Count == 0)
+            {
+                throw new KeyedException("user.data.notfound.for.email", email);
+            }
+            else if(users.Count > 1)
+            {
+
+                throw new KeyedException("user.data.multiplefound.for.email", email);
+            }
+            else
+            {
+                return users[0];
+            }
         }
 
         public override bool UserRegistration(string name, string email, string password)
