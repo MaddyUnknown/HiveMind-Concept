@@ -33,6 +33,14 @@
     display: inline;
 }
 
+.cust-bg-dark-grey {
+    background-color: var(--dark-gray);
+}
+
 .cust-txt-primary {
     color: var(--primary);
+}
+
+.cust-txt-dark-grey {
+    color: var(--white);
 }

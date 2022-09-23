@@ -15,6 +15,7 @@ namespace HiveMind.View
         public static string userRegistration_header = "User Registration";
         public static string invalidInput_header = "Invalid Input";
         public static string serverNote_header = "Server Note";
+        public static string serverError_header = "Server Error";
         public static string invalidCredentials_header = "Invalid Credentials";
 
 

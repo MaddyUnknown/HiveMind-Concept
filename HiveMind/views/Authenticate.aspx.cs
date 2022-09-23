@@ -9,6 +9,7 @@ using System.Web.Security;
 using HiveMind.AuthenticateUtils;
 using HiveMind.Userdefined.Control;
 using HiveMind.Resolver;
+using HiveMind.ApplicationException;
 
 namespace HiveMind.View
 {
@@ -87,6 +88,15 @@ namespace HiveMind.View
         protected void GeneratePasswordChangeEmail_Click(object sender, EventArgs e)
         {
             CreateToast(ViewConstants.errorImageLoc, ViewConstants.serverNote_header, ViewConstants.featureNotImplemented);
+        }
+
+        protected void Page_Error(object sender, EventArgs e)
+        {
+            Exception ex = Server.GetLastError();
+            if(ex is KeyedException)
+            {
+                CreateToast(ViewConstants.errorImageLoc, ViewConstants.serverError_header, ex.Message);
+            }
         }
     }
 }
