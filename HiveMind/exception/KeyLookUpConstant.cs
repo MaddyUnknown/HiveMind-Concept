@@ -18,6 +18,7 @@ namespace HiveMind.ApplicationException
             
             keyLookUp.Add("sql.error.generic", "Error occured during database operation.");
             keyLookUp.Add("implementation.incomplete", "The following feature is incomplete");
+            keyLookUp.Add("feature.notimplementated", "This Feature Is Currently Unavailable");
 
 
             keyLookUp.Add("input.invalid.one", "Invalid input: {0}");

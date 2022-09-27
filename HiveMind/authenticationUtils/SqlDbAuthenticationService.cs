@@ -8,7 +8,7 @@ namespace HiveMind.AuthenticateUtils
 {
     public class SqlDbAuthenticationService : BaseAuthenticationService
     {
-        private string connectionStr;
+        private readonly string connectionStr;
         public SqlDbAuthenticationService(string connectionStr)
         {
             this.connectionStr = connectionStr;
@@ -55,7 +55,7 @@ namespace HiveMind.AuthenticateUtils
 
         public override string CancelToken(string email)
         {
-            throw new KeyedException("implementation.incomplete");
+            throw new KeyedException("feature.notimplementated");
         }
 
         public override User UserDetials(string email)

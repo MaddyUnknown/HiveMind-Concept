@@ -20,12 +20,13 @@ namespace HiveMind.View
 
 
         //Toast Bodys
-        public static string userRegistationSuccess_body = "User was successfully registered";
-        public static string emailAlreadyRegistered_body = "Email is already registed";
-        public static string invalidInput_body = "Provided input are not valid";
-        public static string enterValidInput_body = "Please enter valid Email and Password";
+        public static string userRegistationSuccess_body = "User Was Successfully Registered";
+        public static string emailAlreadyRegistered_body = "Email Is Already Registed";
+        public static string invalidInput_body = "Provided Input Are Not Valid";
+        public static string enterValidInput_body = "Please Enter Valid Email and Password";
+        public static string serverError_body = "An Error Occured While Processing Your Request. Please Try Again Later.";
 
-        public static string featureNotImplemented = "This feature is currently unavailable";
+        public static string featureNotImplemented = "This Feature Is Currently Unavailable";
 
     }
 }

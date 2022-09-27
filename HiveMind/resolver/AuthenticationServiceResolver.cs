@@ -7,13 +7,22 @@ using HiveMind.AuthenticateUtils;
 
 namespace HiveMind.Resolver
 {
+    // This class is responsible for resolving the authentication service that the application will use.
+    // This class follows singleton pattern.
     public static class AuthenticationServiceResolver
     {
-        private static string XmlAuthentication = "xml";
+        private static readonly string XmlAuthentication = "xml";
+
+        private static BaseAuthenticationService authService = InitSingletonAuthService();
 
         public static BaseAuthenticationService Resolve()
         {
-            if(ConfigurationManager.AppSettings["AuthenticationType"].ToLower() == XmlAuthentication)
+            return authService;
+        }
+
+        private static BaseAuthenticationService InitSingletonAuthService()
+        {
+            if (ConfigurationManager.AppSettings["AuthenticationType"].ToLower() == XmlAuthentication)
             {
                 return new XmlAuthenticationService(ConfigurationManager.AppSettings["LoginFileLocation"]);
             }

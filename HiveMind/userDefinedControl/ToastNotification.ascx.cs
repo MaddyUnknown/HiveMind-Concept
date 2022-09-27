@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Drawing;
 
 namespace HiveMind.Userdefined.Control
 {
@@ -66,6 +67,21 @@ namespace HiveMind.Userdefined.Control
                 else
                 {
                     throw new ArgumentNullException("Body Content");
+                }
+            }
+        }
+
+        public Color TextColor
+        {
+            set
+            {
+                if(value != null) {
+                    Body.ForeColor = value;
+                    Heading.ForeColor = value;
+                }
+                else
+                {
+                    throw new ArgumentNullException("Invalid Color");
                 }
             }
         }

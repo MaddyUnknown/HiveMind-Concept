@@ -11,7 +11,7 @@ namespace HiveMind.AuthenticateUtils
 
     public class XmlAuthenticationService : BaseAuthenticationService
     {
-        private string path;
+        private readonly string path;
 
         public XmlAuthenticationService(string path)
         {
@@ -40,7 +40,7 @@ namespace HiveMind.AuthenticateUtils
 
         public override string CancelToken(string email)
         {
-            throw new KeyedException("implementation.incomplete");
+            throw new KeyedException("feature.notimplementated");
         }
         
 

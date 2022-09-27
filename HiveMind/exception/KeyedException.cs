@@ -2,7 +2,7 @@
 {
     public class KeyedException : ApplicationBaseException
     {
-        public KeyedException(string key) : base()
+        public KeyedException(string key) : base(message(key))
         {
 
         }
@@ -12,7 +12,7 @@
 
         }
 
-        private static string message(string key, object[] args)
+        private static string message(string key, object[] args = null)
         {
             if(key == null)
             {
