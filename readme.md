@@ -16,14 +16,14 @@
 
 - Set Up "AuthenticationType" as "XML" in app settings.
 - Set Up data store location in "LoginFileLocation" in app settings. This should point to the absolute path of "HiveMind\data\login_data.xml".
-  ![XML](https://github.com/MaddyUnknown/HiveMind-Concept/HiveMind/asset/imag/readmeSS/xmlconfig.png)
+  ![XML](https://github.com/MaddyUnknown/HiveMind-Concept/blob/main/HiveMind/asset/image/readmeSS/xmlconfig.png)
 
 ### DB Based
 
 - Set Up "AuthenticationType" as "DB" in app settings.
 - Set Up data connection string named "userlogincon".
 - **Note** : To use this feature, SQL Server instance needs to be set up. This is describe in subsequent steps.
-  ![DB](https://github.com/MaddyUnknown/HiveMind-Concept/HiveMind/asset/imag/readmeSS/Dbconfig.png)
+  ![DB](https://github.com/MaddyUnknown/HiveMind-Concept/blob/main/HiveMind/asset/image/readmeSS/Dbconfig.png)
 
 ## Database Setup:
 
